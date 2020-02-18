@@ -1,0 +1,317 @@
+<!--Megane Dandurand-->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- CSS Libraries -->
+    <!-- ================================= -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,700" />
+    <!--Logo font: font-family: 'Pacifico', cursive; and sections: font-family: 'Bree Serif', serif;-->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    
+    <!-- My CSS -->
+    <!-- ================================= -->
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Projet2.css"/>
+    <link rel="stylesheet" type="text/css" href="animate.css"/>
+    <!-- JS Libraries -->
+    <!-- ================================= -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <!-- My Scripts -->
+    <script src="scripts.js"></script>
+    <script src="_data_.js"></script>
+    <title id="titlee">La_Tante_a_tous</title>
+  </head>
+
+  <body>
+
+  <!--/*==============================================*/
+/*                 Navigation                        */
+/*==============================================*/
+ * This section should contain at least the
+ * following elements: header, nav, ul, li, a, div.--> 
+<header id="Logo_sections">
+<nav id="navbar">
+    <!-- LOGO -->
+    <div id ="logo" class="rounded-pill">
+        <div class="animated jello"><h1 id="prenomTante" style="text-align:left;float:left;padding-left: 75px; padding-right: 5px;"></h1> <h1 id="nomTante" style="text-align:right;float:right;"> </h1>
+          <h1 style="text-align:right;float:right;"><svg width="60" height="60">
+              <!--Background-->
+              <rect width="60px" height="60px" fill="yellowgreen"/>
+              <!--1er cercle-->
+              <circle id="white_circle" r="30" cx="30" cy="30" fill="white" opacity="0.6"/>
+              <!--2e cercle-->
+              <circle id="grey_circle" r="0" cx="30" cy="30" fill="white" opacity="0.6" />
+              <!--animations-->
+              <animate 
+                       xlink:href="#white_circle"
+                       attributeName="r"
+                       from="30"
+                       to="0" 
+                       dur="1s"
+                       begin="0s"
+                       repeatcount="indefinite"
+                       values="30; 0"
+                       keyTimes="0; 1"
+                       calcMode="spline"
+                       keySplines="0.42 0 0.58 1"
+                       fill="freeze"
+                       id="wcirc_anim" />
+              <animate 
+                       xlink:href="#grey_circle"
+                       attributeName="r"
+                       from="0"
+                       to="30" 
+                       dur="1s"
+                       begin="0s"
+                       repeatcount="indefinite"
+                       values="0; 30"
+                       keyTimes="0; 1"
+                       calcMode="spline"
+                       keySplines="0.42 0 0.58 1"
+                       fill="freeze" 
+                       id="gcirc_anim"/>
+            </svg></h1>
+    </div>
+    </div>
+    <!-- SECTIONS -->
+    <div id="sections">
+<ul>
+    <li><a href="#accueil"><i class="fas fa-utensils"></i>Accueil</a></li>
+    <li><a href="#recettes"><i class="fas fa-utensils"></i>Recettes</a></li>
+    <li><a href="#contact"><i class="fas fa-utensils"></i>Contact</a></li>
+</ul>
+    </div>
+</nav>
+</header><br>
+<!--/*==============================================*/
+/* Articles                                     */
+/*==============================================*/
+ * This section should contain at least the
+ * following elements: h1, h2, section, article.*/-->
+<!--Section Accueil-->
+<div class="main">
+<section id="accueil">
+  <h1 id="accueilTitre">Accueil</h1>
+  <!--Article 1!!!-->
+    <article id="article1">
+      <!--division globale bloc a gauche-->
+      <div id="a1_divleft">
+      <!--titre1 get dans JSON-->
+      <h1 id="titre1" class="animated pulse"></h1>
+      <!--soustitre1-->
+      <h2 id="soustitre1"></h2>
+      <!--contenu1-->
+      <div id="a1_content"></div>
+      </div>
+      <!--Image a droite-->
+      <div id="a1_divright">
+      <div id="a1_img"><img id="img1" src="https://images.unsplash.com/photo-1549047825-a81dc3f57c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=939&q=80">
+      </div>
+      </div>
+    </article>
+
+    <!--Article 2!!!-->
+    <article id="article2">
+      <div id="a2_divleft">
+      <!--Image a gauche-->
+      <div id="a2_img"><img id="img2" src="https://images.unsplash.com/photo-1547928578-bca3e9c5a0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80">
+      </div>
+      </div>
+      <!--Div globale bloc a droite-->
+      <div id="a2_divright">
+        <!--Titre 2-->
+        <h1 id="titre2" class="animated pulse"></h1>
+        <!--soustitre2-->
+        <h2 id="soustitre2"></h2>
+        <!--contenu 2-->
+        <div id="a2_content"></div>
+      </div>
+    </article>
+    <article id="article3">
+      <!--division globale bloc a gauche-->
+      <div id="a3_divleft">
+        <!--titre1 get dans JSON-->
+        <h1 id="titre3" class="animated pulse"></h1>
+        <!--soustitre1-->
+        <h2 id="soustitre3"></h2>
+        <!--contenu1-->
+        <div id="a3_content"></div>
+        </div>
+        <!--Image a droite-->
+        <div id="a3_divright">
+        <div id="a3_img"><img id="img3" src="https://images.unsplash.com/photo-1534803266547-553ed8fd9861?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80">
+        </div>
+        </div>
+    </article>
+</section>
+<!--/*==============================================*/
+/* Recipes                                      */
+/*==============================================*/
+ * This section should contain at least the
+ * following elements: h1, ul, li, p.
+ */-->
+<!--Section Recettes-->
+<section id="recettes">
+    <h1 id="recettesTitre">Recettes</h1>
+    <div>
+    <ul>
+      <li><p id="description1"></p></li>
+      <li id="price1"></li>
+      <li><img id="img_recipe1" class="animated shake"src="https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/vegetable-lasagna-butternut-bechamel-ck.jpg?itok=VrZ3ChyI"></li>
+    </ul>
+  </div>
+  <div>
+      <ul>
+        <li><p id="description2"></p></li>
+        <li id="price2"></li>
+        <li><img id="img_recipe2" class="animated shake" src="https://thewoksoflife.com/wp-content/uploads/2016/12/general-tso-tofu-4.jpg"></li>
+      </ul>
+    </div>
+    <div>
+        <ul>
+          <li><p id="description3"></p></li>
+          <li id="price3"></li>
+          <li><img id="img_recipe3" class="animated shake" src="https://i0.wp.com/fullofplants.com/wp-content/uploads/2018/01/smoky-tempeh-black-bean-burgers-thumb.jpg?fit=1316%2C1315&ssl=1"></li>
+        </ul>
+      </div>
+      <div>
+          <ul>
+            <li><p id="description4"></p></li>
+            <li id="price4"></li>
+            <li><img id="img_recipe4" class="animated shake" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/4/7/0/FNK_macaroni-salad_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371597354963.jpeg"></li>
+          </ul>
+        </div>
+        <div>
+            <ul>
+              <li><p id="description5"></p></li>
+              <li id="price5"></li>
+              <li><img id="img_recipe5" class="animated shake" src="https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/2012-r-xl-stir-fried-vegetables-with-toasted-cashews.jpg?itok=6Zwv8DUn"></li>
+            </ul>
+          </div>
+          <div>
+              <ul>
+                <li><p id="description6"></p></li>
+                <li id="price6"></li>
+                <li><img id="img_recipe6" class="animated shake" src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/15-june/Recipe_For_Beginners_Fruit_Custard_Recipe_With_Custard_Powder-1.jpg"></li>
+              </ul>
+            </div>
+            <div>
+                <ul>
+                  <li><p id="description7"></p></li>
+                  <li id="price7"></li>
+                  <li><img id="img_recipe7" class="animated shake" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2Frecipes%2Fck%2F09%2F09%2Ftofu-soup-ck-1918466-x.jpg%3Fitok%3DurenKL1X&w=450&c=sc&poi=face&q=85"></li>
+                </ul>
+              </div>
+              <div>
+                  <ul>
+                    <li><p id="description8"></p></li>
+                    <li id="price8"></li>
+                    <li><img id="img_recipe8" class="animated shake" src="http://www.lilvienna.com/wp-content/uploads/Recipe-Salmon-Poke-Bowl.jpg"></li>
+                  </ul>
+                </div>
+                <div>
+                    <ul>
+                      <li><p id="description9"></p></li>
+                      <li id="price9"></li>
+                      <li><img id="img_recipe9" class="animated shake" src="http://www.fromthelittleyellowkitchen.com/wp-content/uploads/2012/04/IMG_4331.jpg"></li>
+                    </ul>
+                  </div>
+                  <div>
+                      <ul>
+                        <li><p id="description10"></p></li>
+                        <li id="price10"></li>
+                        <li><img id="img_recipe10" class="animated shake" src="https://solcuisine.com/wp-content/uploads/2016/03/The-Ultimate-Vegan-Poutine-009.jpg"></li>
+                      </ul>
+                    </div>
+                    <div>
+                        <ul>
+                          <li><p id="description11"></p></li>
+                          <li id="price11"></li>
+                          <li><img id="img_recipe11" class="animated shake" src="https://cdn-image.foodandwine.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/2014-r-xl-vegetarian-butter-tofu.jpg?itok=kfPuVffi"></li>
+                        </ul>
+                      </div>
+                      <div>
+                          <ul>
+                            <li><p id="description12"></p></li>
+                            <li id="price12"></li>
+                            <li><img id="img_recipe12" class="animated shake" src="https://ministryofcurry.com/wp-content/uploads/2016/12/quinoa-almonds-date-truffles-1.jpg"></li>
+                          </ul>
+                        </div>
+</section>
+<!--/*==============================================*/
+/* Contact                                      */
+/*==============================================*/
+ * This section should contain at least the
+ * following elements: h1, label, input.
+ */-->
+<!--Section Contact-->
+<section id="contact">
+    <h1 id="contactTitre">Contact</h1>
+  <form action="http://www.iro.umontreal.ca/~lapalme/ift1005/Exercices/9/echoValeurs.cgi">
+    <i class="far fa-id-card"></i> Prénom: 
+    <input type="text" name="prenom" class="prenom" required>
+    Nom:
+    <input type="text" name="nom" class="nom" required><br>
+
+    <i class="fas fa-home"></i> Adresse:
+    <input type="text" name="adresse" class="adresse" required/>
+    Code Postal:
+    <input type="text" class="areacode" name="areacode" placeholder="CLC LCL" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required/>
+    Ville:
+    <input type="text" name="ville" required/><br>
+
+    <i class="fas fa-phone"></i> Téléphone:
+    <input type="tel" class="telephone" placeholder="(YYY)XXX-XXXX"
+    pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" required/><br><br>
+<div class="panier">
+    <font color="indianred"><i class="fas fa-shopping-basket"></i> Description sommaire des achats:</font><br>
+    <label for="lasagne">Lasagne végée: </label><input type = "number" id="lasagne" value="0" required><br>
+    <label for="tofugeneral">Tofu général tao: </label><input type = "number" id="tofugeneral" value="0" required><br>
+    <label for="burger">Burger tempeh & salade couscous au raisin: </label><input type = "number" id="burger" value="0" required><br>
+    <label for="macaronis">Salade de macaronis: </label><input type = "number" id="macaronis" value="0" required><br>
+    <label for="saute">Sauté de légumes: </label><input type = "number" id="saute" value="0" required><br>
+    <label for="saladefruits">Salade de fruits: </label><input type = "number" id="saladefruits" value="0" required><br>
+    <label for="soupetofu">Soupe au tofu et gingembre: </label><input type = "number" id="soupetofu" value="0" required><br>
+    <label for="saladesaumon">Salade de saumon fumé: </label><input type = "number" id="saladesaumon" value="0" required><br>
+    <label for="croquette">Croquette de quinoa: </label><input type = "number" id="croquette" value="0" required><br>
+    <label for="poutine">Poutine végane: </label><input type = "number" id="poutine" value="0" required><br>
+    <label for="tofubeurre">Tofu au beurre et coco: </label><input type = "number" id="tofubeurre" value="0" required><br>
+    <label for="boules">Boules d'énergie au quinoa: </label><input type = "number" id="boules" value="0" required><br><br>
+</div>
+<input type="submit" class="submitto" value="Soumettre"/>
+
+  </form>
+</section>
+<!--/*==============================================*/
+/* Footer                                       */
+/*==============================================*/
+ * This section should contain at least the
+ * following elements: p.-->
+<!--footer-->
+<footer>
+  <p>Bonjour à tous! Merci d'avoir jeté un coup d'oeil
+     à mon tout nouveau site web, si vous avez des questions, n'hésitez pas à m'écrire 
+     par email. Ci-dessous, mon adresse courriel:</p>
+     <h2 id="adresseSylvie"></h2>
+  <p>Bien à vous, Sylvie Bélanger.</p>
+</footer>
+</div>
+  </body>
+</html>
+
+
